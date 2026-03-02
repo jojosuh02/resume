@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study - Sam Suh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-circle">SS</div>
+                    <span class="logo-name">Sam Suh</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="case-study.html" class="nav-active">Case Study</a>
+            </nav>
+            <button class="btn-contact-header">Contact Now <span class="arrow">→</span></button>
+        </div>
+    </header>
+
+    <main class="case-study-main">
+        <section class="case-study-hero">
+            <p class="case-study-label">CASE STUDY</p>
+            <h1 class="case-study-title">Video portfolio</h1>
+            <p class="case-study-intro">A selection of video work produced for clients.</p>
+        </section>
+
+        <section class="case-study-featured-row">
+            <article class="case-study-card case-study-card--horizontal case-study-card--featured-left">
+                <div class="case-study-thumb">
+                    <video class="case-study-video" controls preload="metadata" src="LeGrande.mp4"></video>
+                </div>
+                <div class="case-study-meta">
+                    <h3 class="case-study-card-title">LeGrande Health</h3>
+                    <p class="case-study-client">Video production</p>
+                </div>
+            </article>
+            <div class="soul-surfer-slideshow">
+                <h3 class="soul-surfer-title">Soul Surfer</h3>
+                <div class="slideshow">
+                    <button type="button" class="slideshow-arrow slideshow-prev" aria-label="Previous slide">‹</button>
+                    <div class="slideshow-viewport">
+                        <div class="slideshow-track">
+                            <div class="slideshow-slide">
+                                <img src="22 (1).png" alt="Resetting the Nervous System & Rewiring the Brain">
+                            </div>
+                            <div class="slideshow-slide">
+                                <img src="KAP Facilitation - Attuning to Clients' Needs for Support (1).png" alt="KAP Facilitation: Attuning to Client's Needs For Support">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="slideshow-arrow slideshow-next" aria-label="Next slide">›</button>
+                </div>
+                <p class="soul-surfer-caption">Click arrows to view slides</p>
+            </div>
+        </section>
+
+        <section class="case-study-grid">
+            <article class="case-study-card">
+                <div class="case-study-thumb case-study-thumb--vertical">
+                    <video class="case-study-video" controls preload="metadata" src="Property Pest Control.mov"></video>
+                </div>
+                <div class="case-study-meta">
+                    <h3 class="case-study-card-title">Property Pest Control</h3>
+                    <p class="case-study-client">Video production</p>
+                </div>
+            </article>
+            <article class="case-study-card">
+                <div class="case-study-thumb case-study-thumb--vertical">
+                    <video class="case-study-video" controls preload="metadata" src="Wyler Windows.MOV"></video>
+                </div>
+                <div class="case-study-meta">
+                    <h3 class="case-study-card-title">Wyler Windows</h3>
+                    <p class="case-study-client">Video production</p>
+                </div>
+            </article>
+            <article class="case-study-card">
+                <div class="case-study-thumb case-study-thumb--vertical">
+                    <video class="case-study-video" controls preload="metadata" src="Get Dumpster Bags.mov"></video>
+                </div>
+                <div class="case-study-meta">
+                    <h3 class="case-study-card-title">Get Dumpster Bags</h3>
+                    <p class="case-study-client">Video production</p>
+                </div>
+            </article>
+            <article class="case-study-card">
+                <div class="case-study-thumb case-study-thumb--vertical">
+                    <video class="case-study-video" controls preload="metadata" src="Clear Coast.mov"></video>
+                </div>
+                <div class="case-study-meta">
+                    <h3 class="case-study-card-title">Clear Coast</h3>
+                    <p class="case-study-client">Video production</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Contact modal -->
+    <div id="contact-modal" class="contact-modal" aria-hidden="true">
+        <div class="contact-modal-overlay"></div>
+        <div class="contact-modal-box">
+            <button type="button" class="contact-modal-close" aria-label="Close">×</button>
+            <h2 class="contact-modal-title">Get in touch</h2>
+            <form class="contact-form" action="https://formspree.io/f/mbdavydj" method="POST">
+                <label for="contact-name-cs">Name</label>
+                <input type="text" id="contact-name-cs" name="name" required placeholder="Your name">
+                <label for="contact-phone-cs">Phone Number</label>
+                <input type="tel" id="contact-phone-cs" name="phone" placeholder="Your phone number">
+                <label for="contact-email-cs">Email</label>
+                <input type="email" id="contact-email-cs" name="email" required placeholder="Your email">
+                <label for="contact-message-cs">Message</label>
+                <textarea id="contact-message-cs" name="message" rows="4" required placeholder="Your message"></textarea>
+                <button type="submit" class="contact-form-submit">Send message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
