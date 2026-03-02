@@ -4,11 +4,22 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: #f8fafc;
     color: #1a1a1a;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Header */
@@ -708,34 +719,253 @@ body {
     .stats-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .about-left-column,
+    .about-box-right {
+        grid-column: 1;
+    }
+
+    .services-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .services-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .services-title {
+        font-size: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 1.25rem;
+    }
+
+    .my-story-title {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 1rem 0;
+    }
+
     .header-container {
         flex-direction: column;
         gap: 1rem;
+        padding: 0 1rem;
     }
 
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.75rem 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.875rem;
+    }
+
+    .btn-contact-header {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.875rem;
+        min-height: 44px;
+    }
+
+    .main-content {
+        padding: 1.25rem 1rem;
+    }
+
+    .hero-section {
+        margin-bottom: 2rem;
     }
 
     .hero-name {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        max-width: 100%;
     }
 
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+    }
+
+    .experience-card .card-title {
+        white-space: normal;
     }
 
     .stats-container {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
     }
 
     .skills-card {
         padding: 1rem;
+    }
+
+    .about-section,
+    .stats-section,
+    .skills-section {
+        margin-bottom: 2.5rem;
+    }
+
+    .my-story-container,
+    .about-container,
+    .info-box {
+        padding: 1.25rem;
+    }
+
+    .info-images {
+        flex-wrap: wrap;
+    }
+
+    .info-image {
+        min-width: 80px;
+    }
+
+    .services-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .services-header {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 1.5rem;
+    }
+
+    .services-button {
+        align-self: flex-start;
+    }
+
+    .services-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1.25rem;
+    }
+
+    .service-card-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 0.75rem;
+    }
+
+    .logo-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 0.75rem;
+    }
+
+    .logo-name {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem 0.75rem;
+    }
+
+    .hero-name {
+        font-size: 2.25rem;
+    }
+
+    .greeting {
+        font-size: 0.8125rem;
+    }
+
+    .hero-description {
+        font-size: 0.875rem;
+    }
+
+    .profile-image-container {
+        max-width: 220px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8125rem;
+    }
+
+    .services-title {
+        font-size: 1.25rem;
+    }
+
+    .contact-modal {
+        padding: 0.75rem;
+        align-items: flex-end;
+    }
+
+    .contact-modal-box {
+        padding: 1.5rem 1.25rem;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .contact-modal-close {
+        width: 44px;
+        height: 44px;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .contact-modal-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        padding-right: 2.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.75rem;
+        font-size: 16px;
+    }
+
+    .contact-form-submit {
+        min-height: 48px;
+        padding: 0.875rem;
     }
 }
 
@@ -768,6 +998,9 @@ body {
     padding: 2rem;
     max-width: 440px;
     width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 .contact-modal-close {
@@ -1112,24 +1345,109 @@ body {
 }
 
 @media (max-width: 768px) {
+    .case-study-main {
+        padding: 1.25rem 1rem 3rem;
+    }
+
+    .case-study-hero {
+        margin-bottom: 2rem;
+    }
+
+    .case-study-title {
+        font-size: 2rem;
+    }
+
+    .case-study-intro {
+        font-size: 0.9375rem;
+    }
+
+    .case-study-featured-row {
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .case-study-card--featured-left,
+    .soul-surfer-slideshow {
+        padding: 1rem;
+    }
+
+    .case-study-card--featured-left .case-study-thumb {
+        height: 240px;
+    }
+
+    .case-study-featured-row .slideshow-viewport {
+        height: 240px;
+    }
+
     .case-study-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
+
     .case-study-card--horizontal {
         margin-left: 0;
         margin-right: 0;
         width: 100%;
     }
+
     .slideshow-viewport {
         min-height: 220px;
     }
+
     .slideshow-slide .slideshow-pdf {
         min-height: 220px;
+    }
+
+    .slideshow-arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+
+    .contact-modal-box {
+        padding: 1.75rem;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .contact-modal-close {
+        width: 44px;
+        height: 44px;
     }
 }
 
 @media (max-width: 560px) {
     .case-study-featured-row {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-study-main {
+        padding: 1rem 0.75rem 2.5rem;
+    }
+
+    .case-study-label {
+        font-size: 0.6875rem;
+    }
+
+    .case-study-title {
+        font-size: 1.75rem;
+    }
+
+    .case-study-card--featured-left .case-study-thumb {
+        height: 200px;
+    }
+
+    .case-study-featured-row .slideshow-viewport {
+        height: 200px;
+    }
+
+    .case-study-card-title {
+        font-size: 1rem;
+    }
+
+    .soul-surfer-title {
+        font-size: 1rem;
     }
 }
